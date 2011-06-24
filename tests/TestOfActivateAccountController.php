@@ -19,7 +19,7 @@
  *
  * You should have received a copy of the GNU General Public License along with ThinkUp.  If not, see
  * <http://www.gnu.org/licenses/>.
- * 
+ *
  * Test of ActivateAccountController
  *
  * @license http://www.gnu.org/licenses/gpl.html
