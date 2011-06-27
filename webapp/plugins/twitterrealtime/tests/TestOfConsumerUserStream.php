@@ -64,7 +64,7 @@ class TestOfConsumerUserStream extends ThinkUpUnitTestCase {
         //dont run redis test for php less than 5.3
         $version = explode('.', PHP_VERSION);
         if (! ($version[0] >= 5 && $version[1] >= 3)) {
-            error_log("PHP version less than 5.3, Skipping Redis Tests...");
+            //error_log("PHP version less than 5.3, Skipping Redis Tests...");
             return;
         } else {
             require_once THINKUP_ROOT_PATH.'webapp/plugins/twitterrealtime/model/class.StreamMessageQueueRedis.php';
@@ -103,7 +103,7 @@ class TestOfConsumerUserStream extends ThinkUpUnitTestCase {
         //dont run redis test for php less than 5.3
         $version = explode('.', PHP_VERSION);
         if (! ($version[0] >= 5 && $version[1] >= 3)) {
-            error_log("PHP version less than 5.3, Skipping Redis Tests...");
+            //error_log("PHP version less than 5.3, Skipping Redis Tests...");
             return;
         }
         if((getenv('WITH_REDIS')!==false)) {

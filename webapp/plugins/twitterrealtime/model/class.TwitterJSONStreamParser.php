@@ -53,6 +53,9 @@ class TwitterJSONStreamParser {
         $content = json_decode($data, true); //@TODO what does the 2nd argument do?
         $logger = Logger::getInstance('stream_log_location');
 
+        if (!is_array($content)) {
+            return false;
+        }
         // route depending upon content
         if (isset($content['friends'])) {
             $logger->logDebug("Friends list: $content", __METHOD__.','.__LINE__);
@@ -129,7 +132,8 @@ class TwitterJSONStreamParser {
             $ud = DAOFactory::getDAO('UserDAO');
             $ud->setLoggerInstance($this->logger);
             $u = new User($source_user);
-            $logger->logDebug("in addFavorite, adding or updating source user: " . $u->user_id, __METHOD__.','.__LINE__);
+            $logger->logDebug("in addFavorite, adding or updating source user: " . $u->user_id, __METHOD__.','.
+            __LINE__);
             $ud->updateUser($u);
         } else {
             $logger->logDebug("in addFavorite--could not get source user information-- should have been available."
@@ -190,8 +194,8 @@ class TwitterJSONStreamParser {
             $user = $content['user'];
 
             // parse info into user and post arrays
-            $post['post_id'] = $content['id'];
-            $post['author_user_id'] = $user['id'];
+            $post['post_id'] = $content['id_str'];
+            $post['author_user_id'] = $user['id_str'];
             $post['author_username'] = $user['screen_name'];
             $post['author_fullname'] = $user['name'];
             $post['author_avatar'] = $user['profile_image_url'];
@@ -228,15 +232,15 @@ class TwitterJSONStreamParser {
             }
 
             $post['pub_date'] = gmdate("Y-m-d H:i:s", strToTime($content['created_at']));
-            $post['in_reply_to_user_id'] = $content['in_reply_to_user_id'];
-            $post['in_reply_to_post_id'] = $content['in_reply_to_status_id'];
+            $post['in_reply_to_user_id'] = $content['in_reply_to_user_id_str'];
+            $post['in_reply_to_post_id'] = $content['in_reply_to_status_id_str'];
             $post['network'] = 'twitter';
             $post['reply_count_cache'] = 0;
 
             if (isset($content['entities'])) {
                 foreach ($content['entities']['user_mentions'] as $m) {
                     $mention_info = array();
-                    $mention_info['user_id'] = $m['id'];
+                    $mention_info['user_id'] = $m['id_str'];
                     $mention_info['user_name'] = $m['screen_name'];
                     $mentions[] = $mention_info;
                 }
@@ -278,7 +282,7 @@ class TwitterJSONStreamParser {
                         $retweet_count_api = substr($content['retweet_count'], 0, $pos) ;
                     }
                     $post['retweet_count_api'] = $retweet_count_api;
-                    $this->logger->logDebug($content['id'] . " is not a retweet but orig., count is: " .
+                    $this->logger->logDebug($content['id_str'] . " is not a retweet but orig., count is: " .
                     $content['retweet_count'] . "/ ".
                     $retweet_count_api, __METHOD__.','.__LINE__);
                 }
@@ -289,23 +293,24 @@ class TwitterJSONStreamParser {
                     if (RetweetDetector::isRetweet($post['post_text'], $first_mention)) {
                         $post['is_rt'] = true;
                         $post['in_rt_of_user_id'] = $mentions[0]['user_id'];
-                        $logger->logDebug("detected retweet of: " . $post['in_rt_of_user_id'] . ", " . $first_mention, __METHOD__.','.__LINE__);
+                        $logger->logDebug("detected retweet of: " . $post['in_rt_of_user_id'] . ", " .
+                        $first_mention, __METHOD__.','.__LINE__);
                     }
                 }
             } else {
                 // then this is a retweet.
                 // Process its original too.
                 $this->logger->logInfo("this is a retweet, will first process original post " .
-                $content['retweeted_status']['id'] .
-                   " from user " . $content['retweeted_status']['user']['id'], __METHOD__.','.__LINE__);
+                $content['retweeted_status']['id_str'] .
+                   " from user " . $content['retweeted_status']['user']['id_str'], __METHOD__.','.__LINE__);
                 list($orig_post, $orig_entities, $orig_user_array) = $this->parsePost($content['retweeted_status']);
                 $rtp = array();
                 $rtp['content'] = $orig_post;
                 $rtp['entities'] = $orig_entities;
                 $rtp['user_array'] = $orig_user_array;
                 $post['retweeted_post'] = $rtp;
-                $post['in_retweet_of_post_id'] = $content['retweeted_status']['id'];
-                $post['in_rt_of_user_id'] = $content['retweeted_status']['user']['id'];
+                $post['in_retweet_of_post_id'] = $content['retweeted_status']['id_str'];
+                $post['in_rt_of_user_id'] = $content['retweeted_status']['user']['id_str'];
             }
 
             $user_array = $this->parseUser($user, $post['pub_date']);
