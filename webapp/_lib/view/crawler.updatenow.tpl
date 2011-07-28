@@ -6,9 +6,9 @@
 
 <div class="container_24 thinkup-canvas clearfix">
 <div class="grid_22 prefix_1 alpha omega prepend_20 append_20 clearfix">
-<h1>Update ThinkUp</h1>
+<h1>Update BigData</h1>
 <p class="success">
-ThinkUp is updating your data. To see the technical details of what's going on, check out the log below.
+BigData is updating your data. To see the technical details of what's going on, check out the log below.
 This could take a while. Leave this page open until it's complete.
 </p>
 <br />

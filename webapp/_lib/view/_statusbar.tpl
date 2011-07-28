@@ -87,8 +87,8 @@
 <div class="container clearfix">
   
   <div id="app-title"><a href="{$site_root_path}{$logo_link}">
-    <h1><span class="bold">Think</span><span class="gray">Up</span></h1>
-    <h2>New ideas</h2>
+    <h1><span class="bold">Big</span><span class="gray">Data</span></h1>
+    <h2>Aegis Media</h2>
   </a></div> <!-- end #app-title -->
   
 </div> <!-- end .container -->
