@@ -55,7 +55,7 @@
   <div id="status-bar">&nbsp;</div>
   <div class="container clearfix">
     <div id="app-title">
-          <h1><span class="bold">Think</span><span class="gray">Up</span></h1>
-          <h2>New ideas</h2>
+          <h1><span class="bold">Big</span><span class="gray">Data</span></h1>
+          <h2>Aegis Media Japan</h2>
     </div>
   </div>
