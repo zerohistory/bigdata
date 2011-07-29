@@ -42,7 +42,7 @@ class UpdateNowController extends ThinkUpAuthAPIController {
         $rss_url = THINKUP_BASE_URL . sprintf('rss.php?un=%s&as=%s', $email, $owner->api_key);
         $config = Config::getInstance();
         $site_root_path = $config->getValue('site_root_path');
-        $this->addInfoMessage('<b>Hint</b><br />You can automate ThinkUp crawls by subscribing to '.
+        $this->addInfoMessage('<b>Hint</b><br />You can automate BigData crawls by subscribing to '.
             '<strong><a href="'.$rss_url.'" target="_blank">this secret RSS feed</a></strong> '.
             'in your favorite newsreader. Accidentally share the feed URL? ' .
             '<a href="' . $site_root_path . 'account/index.php?m=manage#instances">Reset it.</a>'.
@@ -51,7 +51,7 @@ class UpdateNowController extends ThinkUpAuthAPIController {
             '<code style="font-family:Courier">cd '.THINKUP_WEBAPP_PATH.
             'crawler/;export THINKUP_PASSWORD=yourpassword; '.$php_path.' crawl.php '.$this->getLoggedInUser().
             '</code><br /><br /><a href="http://thinkupapp.com/docs/userguide/datacapture.html">Learn more about '.
-            'how to update your ThinkUp data</a>.' );
+            'how to update your BigData data</a>.' );
         if (isset($_GET['log']) && $_GET['log'] == 'full') {
             $this->addToView('log', 'full');
         }
