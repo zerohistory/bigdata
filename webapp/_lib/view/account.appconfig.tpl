@@ -27,7 +27,7 @@
       <div style="clear:both;"></div>
       <div style="float: left;">
         <label for="is_registration_open">
-          Open registration to new ThinkUp users:
+          Open registration to new BigData users:
           <br />
         </label>
       </div>
@@ -83,7 +83,7 @@
       </div>
       <div style="clear:both;"></div>
       <div style="font-size: 10px; margin: 0px 0px 10px 0px;">
-        Set whether or not your site's data is available via ThinkUp's JSON API. {insert name="help_link" id="api"}
+        Set whether or not your site's data is available via BigData's JSON API. {insert name="help_link" id="api"}
       </div>
 
       <div style="float: left;">
@@ -97,7 +97,7 @@
       </div>
       <div style="clear:both;"></div>
       <div style="font-size: 10px; margin: 0px 0px 10px 0px;">
-        Set whether or not a user can embed a ThinkUp thread onto another web site.
+        Set whether or not a user can embed a BigData thread onto another web site.
       </div>
 
       <div style="float: left;">
