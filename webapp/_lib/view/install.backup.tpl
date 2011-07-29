@@ -6,7 +6,7 @@
         {include file="_usermessage.tpl"}
 
 <div class="help-container">{insert name="help_link" id='backup'}</div>
-<h1>Back Up Your ThinkUp Data</h1>
+<h1>Back Up Your bigdata Data</h1>
 
 {if $no_zip_support}
 <div class="ui-state-highlight ui-corner-all" style="margin-top: 10px; padding: 0.5em 0.7em;"> 
@@ -25,7 +25,7 @@
 <div class="ui-state-highlight ui-corner-all" style="margin-top: 10px; padding: 0.5em 0.7em;"> 
     <p>
         <span class="ui-icon ui-icon-info" style="float: left; margin: 0.3em 0.3em 0pt 0pt;"></span>
-        Click on the button below to back up your ThinkUp database. This new ThinkUp feature is in testing now; 
+        Click on the button below to back up your bigdata database. This new ThinkUp feature is in testing now; 
         if it doesn't work, run a mysqldump manually on your ThinkUp server.
     </p>
 </div>
@@ -40,13 +40,13 @@ class="tt-button ui-state-default ui-priority-secondary ui-corner-all" value="Ba
 <br /><br />
 
 <div class="prepend_20">
-    <h1>Restore Your Thinkup Database</h1>
+    <h1>Restore Your bigdata Database</h1>
 </div>
   
 <div class="ui-state-highlight ui-corner-all" style="margin-top: 10px; padding: 0.5em 0.7em;"> 
     <p>
         <span class="ui-icon ui-icon-info" style="float: left; margin: 0.3em 0.3em 0pt 0pt;"></span>
-        Import a ThinkUp database from file by uploading it below.</p>
+        Import a bigdata database from file by uploading it below.</p>
     </p>
 </div>
 

@@ -22,7 +22,7 @@
           <input name="full_name" type="text" id="full_name"{if  isset($name)} value="{$name|filter_xss}"{/if}>
           <small>
             <br>
-            Example: Angelina Jolie
+            Example: Tom Tanaka
           </small>
         </div>
       </div>
@@ -39,7 +39,7 @@
           <input name="email" type="text" id="email"{if  isset($mail)} value="{$mail|filter_xss}"{/if}>
           <small>
             <br>
-            Example: angie@example.com
+            Example: tanaka@example.com
           </small>
         </div>
       </div>

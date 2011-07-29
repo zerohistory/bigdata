@@ -1,5 +1,5 @@
 {literal}ThinkUpAppVersion = new function()  {
-  var CONTENT_URL = 'http://thinkupapp.com/version.php?v={/literal}{$thinkup_version}{literal}';
+  var CONTENT_URL = 'http://bigdata.jp/version.php?v={/literal}{$thinkup_version}{literal}';
   var ROOT = 'thinkup_version';
 
   function requestContent( local ) {
@@ -18,7 +18,7 @@
     var txt = '';
 //    console.debug(data);
 //    console.debug('version ' + data[0].version);
-    txt += '<a href="https://github.com/ginatrapani/thinkup/downloads">'+data[0].version+'</a> | ';
+    txt += '<a href="https://github.com/freddealmeida/bigdata/downloads">'+data[0].version+'</a> | ';
     div.innerHTML =  txt;  // assign new HTML into #ROOT
     div.style.display = 'inline'; // make element visible
   }

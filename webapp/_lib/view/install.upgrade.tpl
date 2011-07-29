@@ -2,7 +2,7 @@
 {include file="_statusbar.tpl"}
 <div class="container_24 thinkup-canvas round-all">
   <div class="prepend_20">
-    <h1>Upgrade ThinkUp</h1>
+    <h1>Upgrade BigData</h1>
   </div>
   <div class="clearfix prepend_20">
     <div class="grid_17 prefix_3 left">
@@ -13,9 +13,9 @@
     {if ! $migrations[0]}
     <div class="success" style="margin: 0px 50px 0px 50px; padding: 0.5em 0.7em;">
     <!-- no upgrade needed -->
-    <p>Your database is up to date. <a href="{$site_root_path}">Continue using ThinkUp</a>, or <a href="backup.php">back up your database.</a></p>
+    <p>Your database is up to date. <a href="{$site_root_path}">Continue using BigData</a>, or <a href="backup.php">back up your database.</a></p>
         {if $version_updated}
-        <p>Your application database version has been updated to reflect the latest installed version of ThinkUp.</p>
+        <p>Your application database version has been updated to reflect the latest installed version of BigData.</p>
         {/if}
     </div>
     {else}
@@ -23,8 +23,8 @@
         <div id="migration-info">
         <p>
         <span class="ui-icon ui-icon-info" style="float: left; margin: 0.3em 0.3em 0pt 0pt;"></span>
-        Your ThinkUp installation needs {$migrations|@count} database update{if $migrations|@count gt 1}s{/if}. {if $user_is_admin}Before you proceed, 
-        <a href="{$site_root_path}install/backup.php">back up your current ThinkUp database</a>.{else}<br />If you haven't already, <a href="http://thinkupapp.com/docs/install/backup.html">back up your current installation's data first</a>.{/if}
+        Your BigData installation needs {$migrations|@count} database update{if $migrations|@count gt 1}s{/if}. {if $user_is_admin}Before you proceed, 
+        <a href="{$site_root_path}install/backup.php">back up your current Bigdata database</a>.{else}<br />If you haven't already, <a href="http://thinkupapp.com/docs/install/backup.html">back up your current installation's data first</a>.{/if}
         </p>
         </div>
         <script type="text/javascript">

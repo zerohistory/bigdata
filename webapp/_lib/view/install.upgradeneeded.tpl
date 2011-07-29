@@ -4,7 +4,7 @@
 
 <head>
 <meta charset="utf-8">
-<title>ThinkUp: Upgrading</title>
+<title>BigData: Upgrading</title>
 <link rel="shortcut icon" type="image/x-icon"
     href="/assets/img/favicon.ico">
 <!-- jquery -->
@@ -44,16 +44,13 @@
 <div class="container clearfix">
 
 <div id="app-title"><a href="{$site_root_path}index.php">
-<h1><span class="bold">Think</span><span class="gray">Up</span></h1>
-<h2>New ideas</h2>
+<h1><span class="bold">Big</span><span class="gray">Data</span></h1>
+<h2>Aegis Media</h2>
 </a></div>
 <!-- end #app-title -->
 
 <div id="menu-bar">
-<ul>
-    <li class="round-tr round-br round-tl round-bl"><a
-        href="http://thinkupapp.com/">Get ThinkUp</a></li>
-</ul>
+
 </div>
 <!-- end #menu-bar --></div>
 <!-- end .container -->
@@ -63,16 +60,16 @@
 <!--  we are upgrading -->
 <p>
 {if $user_is_admin}
-ThinkUp's database needs an update. <a href="{$site_root_path}install/upgrade.php">Update now</a>.
+BigData's database needs an update. <a href="{$site_root_path}install/upgrade.php">Update now</a>.
 {else}
-ThinkUp is currently in the process of upgrading. Please try back again in a little while.<br /><br />
-If you are the administrator of this ThinkUp installation, check your email to complete the upgrade process.<br />
-(<a href="http://thinkupapp.com/docs/troubleshoot/messages/upgrading.html">What? Help!</a>)
+BigData is currently in the process of upgrading. Please try back again in a little while.<br /><br />
+If you are the administrator of this BigData installation, check your email to complete the upgrade process.<br />
+
 
 <p>
 <form method="get" action="{$site_root_path}install/upgrade.php" style="margin-top: 20px">
 If you have an
-<a href="http://thinkupapp.com/docs/troubleshoot/messages/upgrading.html">
+<a href="#">
 upgrade token</a>, you can enter it here:
 <input type="text" name="upgrade_token" />
 <input type="submit" value="Submit Token" />
@@ -88,7 +85,7 @@ upgrade token</a>, you can enter it here:
 <div class="container small center">
 
 <div id="ft" role="contentinfo">
-<p>It is nice to be nice.</p>
+
 </div>
 <!-- #ft --></div>
 <!-- .content -->

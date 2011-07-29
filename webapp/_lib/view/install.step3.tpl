@@ -12,7 +12,7 @@
           <li id="step-tab-2" class="ui-state-default ui-corner-top">
             <div class="key-stat install_step">
             <h1><span class="pass_step" id="pass-step-2">2</span></h1>
-            <h3>Configure ThinkUp</h3>
+            <h3>Configure BigData</h3>
             </div>
           </li>
           <li id="step-tab-3" class="no-border ui-state-default ui-corner-top ui-tabs-selected ui-state-active">
@@ -32,7 +32,7 @@
       <div class="grid_22 push_1 clearfix">
       <h2 class="clearfix step_title">Congratulations!</h2>
           <p class="success" style="margin-bottom: 30px">
-            ThinkUp has been installed successfully. Check your email account; an account activation message has been sent.
+            BigData has been installed successfully. Check your email account; an account activation message has been sent.
           </p>
     
 <br /><br />

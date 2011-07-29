@@ -55,7 +55,7 @@ class DashboardController extends ThinkUpController {
             $this->loadView();
         } else {
             if (!Session::isLoggedIn()) {
-                $this->addInfoMessage('There are no public accounts set up in this ThinkUp installation.<br /><br />'.
+                $this->addInfoMessage('There are no public accounts set up in this Bigdata installation.<br /><br />'.
                 'To make a current account public, log in and click on "Settings." Click on one of the plugins '.
                 'that contain accounts (like Twitter or Facebook) and click "Set Public" next to the account that '.
                 ' should appear to users who are not logged in.');
@@ -217,7 +217,7 @@ class DashboardController extends ThinkUpController {
             $this->addToView('latest_clients_usage', $latest_clients_usage);
         } else {
             $this->addErrorMessage($username." on ".ucwords($this->instance->network).
-            " isn't set up on this ThinkUp installation.");
+            " isn't set up on this bigdata installation.");
         }
     }
 }

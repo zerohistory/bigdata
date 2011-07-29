@@ -12,7 +12,7 @@
           <li id="step-tab-2" class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active">
             <div class="key-stat install_step">
             <h1>2</h1>
-            <h3>Configure ThinkUp</h3>
+            <h3>Configure BigData</h3>
             </div>
           </li>
           <li id="step-tab-3" class="no-border ui-state-default ui-corner-top">
@@ -33,7 +33,7 @@
         <form class="input" name="form1" method="post" action="index.php?step=3">
             {include file="_usermessage.tpl"}
 
-            <h2 class="clearfix step_title">Create Your ThinkUp Account</h2>
+            <h2 class="clearfix step_title">Create Your BigData Account</h2>
           <div class="clearfix append_20">
             <div class="grid_5 prefix_3 right">
               <label>Name</label>
@@ -91,7 +91,7 @@
             </div>
           </div>
 
-          <h2 class="clearfix step_title">Connect ThinkUp to Your Database</h2>
+          <h2 class="clearfix step_title">Connect BigData to Your Database</h2>
 
           <div class="clearfix append_20">
           {include file="_usermessage.tpl" field="database"}
@@ -114,7 +114,7 @@
             </div>
             <div class="grid_10 prefix_1 left">
               <input type="text" name="db_name" id="db_name"{if isset($db_name)} value="{$db_name}"{/if}>
-              <span class="input_information">If the database does not exist, ThinkUp will attempt to create it.</span>
+              <span class="input_information">If the database does not exist, BigData will attempt to create it.</span>
             </div>
           </div>
           
