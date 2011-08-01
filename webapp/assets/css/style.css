@@ -241,7 +241,7 @@ text-align: center;
 #nav-sidebar {background-color:#e6e6e6; padding-left: 8px;}
 #nav-sidebar h2 {padding-bottom: 10px; padding-top:20px; color: black;font-size: medium;}
 #nav-sidebar h2 a {color : black;}
-#nav-sidebar {font-size: small; color: #999;}
+#nav-sidebar {font-size: small; color: #666; text-transform: uppercase;}
 #nav-sidebar ul {list-style-type: none; padding-bottom : 10px;}
 #nav-sidebar li {list-style-type: none;}
 #nav-sidebar a, .word-frequency-div div {
@@ -253,7 +253,7 @@ text-align: center;
 	padding-right: 8px;
 }
 #nav-sidebar ul.side-subnav li a:hover {
-	background-color: #6184B5;
+	background-color: #666666;
 	border: 0px solid #ddd;
 -moz-border-radius-topleft: 5px;
 -webkit-border-top-left-radius: 5px;
@@ -263,7 +263,7 @@ text-align: center;
 #nav-sidebar ul.side-subnav li a:hover {color: white;}
 #top-level-sidenav {margin-top:7px}
 #nav-sidebar ul.side-subnav .currentview a, #nav-sidebar ul.side-subnav .currentview a:hover {
-  color: #6184B5;
+  color: #666666;
   background-color: #FFF;
   border: 0px solid #ddd;
 -moz-border-radius-topleft: 5px;

@@ -261,7 +261,7 @@ are in place to stop long URLs or words from overflowing. */
 
 .post {} /* border-top:1px solid #CCC; */
 .tweet {font-size:1.6em;line-height:1.1em;}
-.individual-tweet {padding:0; line-height:1.2em;} /* border-top:1px solid #CCC;*/
+.individual-tweet { padding: 5px; border-left: 2px solid #666; margin-bottom: 7px; background-color: #EFEFEF; line-height:1.2em; }
 .individual-tweet a:link, .individual-tweet a:visited {text-decoration:none;}
 .individual-tweet a:hover {text-decoration:underline;}
 .individual-tweet p {}
@@ -359,11 +359,11 @@ line-height:1.8em;
 	background-color: #e6e6e6; 
 	border: 1px solid #ddd;
 	*/
-	background: -moz-linear-gradient(top, #FFFFFF, #E6E6E6);  
-	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#E6E6E6));  
+	background: #EEEEEE;
 	padding : 10px 10px 14px 20px;
 	margin-bottom : 20px;
 }
+
 
 /* --- BUTTONS -------------------------------- */
 /* adapted from the filament group: http://www.filamentgroup.com/examples/buttonFrameworkCSS/ */
